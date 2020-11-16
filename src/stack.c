@@ -1,36 +1,44 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 #include "config.h"
 
-static long i_stack[MAX] = {0};
-static size_t index_i = 1; //stack pointer, should point to top (0)
+static long l_stack[MAX] = {0};
+static size_t l_index = 1; //stack pointer, should point to top (0)
+
+//static char* s_stack = NULL;
+//static size_t s_index = 0;
 
 void push(const long data){
-	if(index_i == 0) index_i = 1;
-	i_stack[index_i++] = data;
+	if(l_index == 0) l_index = 1;
+	l_stack[l_index++] = data;
 }
 
 void show_stack(){
 	size_t i = 1;
-	printf("<%ld> ", index_i-1);	
-	for(; i < index_i; i++)
-		printf("%ld ", i_stack[i]);
+	printf("<%ld> ", l_index-1);	
+	for(; i < l_index; i++)
+		printf("%ld ", l_stack[i]);
 	printf("\n");
 }
 
 long read_stack(){
-	return i_stack[index_i-1];
+	return l_stack[l_index-1];
 }
 
 long pop(){
-	if(index_i == 1){
+	if(l_index == 1){
 		puts("Stack Underflow");
-		return -666;
+		return 0;
 	} else
-		return i_stack[--index_i];
+		return l_stack[--l_index];
 }
 
+/*void init(){
+	//initalize string stack as needed
+}*/
+
 size_t get_index(){
-	return index_i;
+	return l_index;
 }
 
