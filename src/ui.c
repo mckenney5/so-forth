@@ -51,6 +51,7 @@ int from_file(char *file_name){
 		}
 	}
 	run(script);
+	fclose(fp);
 	return 0;
 }
 
