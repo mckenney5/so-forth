@@ -19,6 +19,8 @@ void ui(){
 			else
 				run(inpt);
 		}
+		fflush(stdout);
+		putchar('\n');
 	}
 }
 
@@ -68,6 +70,7 @@ int main(int argc, char **argv){
 			if(from_file(argv[i])) return 1;
 	} else
 		ui();
+	putchar('\n');
 	return 0;
 }
 

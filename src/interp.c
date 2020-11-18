@@ -9,22 +9,13 @@
 
 static int error_id = 0;
 
-static int read_error(){
-	if(error_id){
-		error_id = 0;
-		return 1;
-	} else
-		return 0;
-}
-
-
-static void check_error(){
-	const char padding[] = "  ";
-	switch(read_error()){
-		case 0: printf("%s ok", padding); break;
-		case E_UNDERFLOW: fprintf(stderr, "%s underflow.", padding);    
-		default: printf("%s unknown error", padding);
+static int check_error(){
+	switch(error_id){
+		case 0: break;
+		case E_UNDERFLOW: fprintf(stderr, "%s underflow.", PADDING);    
+		default: printf("%s unknown error", PADDING);
 	}
+	return error_id;
 }
 
 int is_digit(const char* input){
@@ -81,7 +72,9 @@ void run(char *input){
 		else if(!strcmp(".s", t)) show_stack();
 		//else if(!strcmp("s\"")) ; //put a string and its size on the stack
 		else printf("Unknown command '%s'\n", t);
-		check_error();
+		if(check_error()) break; //if there is an error, stop
 	}
+	if(!error_id) printf("%s ok", PADDING);
+	error_id = 0;
 }
 

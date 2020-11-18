@@ -10,9 +10,12 @@
 #define MAX_SCRIPT 1024
 
 // what is displayed to the user
-#define PROMPT "forth> "
+#define PROMPT ""
 
 
-#define MOTD "~soforth~"
+#define MOTD "~soforth~\nTo exit, type 'bye'"
+
+// padding of interp input
+#define PADDING " "
 
 #endif

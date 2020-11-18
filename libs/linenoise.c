@@ -1252,7 +1252,7 @@ static int linenoiseRaw(char *buf, FILE *out, size_t buflen, const char *prompt)
     if (enableRawMode(STDIN_FILENO) == -1) return -1;
     count = linenoiseEdit(STDIN_FILENO, outfd, buf, buflen, prompt);
     disableRawMode(STDIN_FILENO);
-    fprintf(out, "\n");
+    fprintf(out, " "); //allows the output to be a single line
     return count;
 }
 

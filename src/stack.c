@@ -4,7 +4,7 @@
 #include "config.h"
 
 static long l_stack[MAX] = {0};
-static size_t l_index = 1; //stack pointer, should point to top (0)
+static size_t l_index = 1; //stack pointer, should point to top (1)
 
 //static char* s_stack = NULL;
 //static size_t s_index = 0;
@@ -19,7 +19,7 @@ void show_stack(){
 	printf("<%ld> ", l_index-1);	
 	for(; i < l_index; i++)
 		printf("%ld ", l_stack[i]);
-	printf("\n");
+	fflush(stdout);
 }
 
 long read_stack(){
