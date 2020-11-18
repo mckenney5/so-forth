@@ -15,3 +15,7 @@ Feel free to file bug reports and discussion.
 
 Code will not be accepted as that defeats the point of writing it myself.
 
+## Further Reading
+- [ANSI 1994 Standard](https://www.taygeta.com/forth/dpans.html)
+- [Standard Words](https://www.taygeta.com/forth/dpansf.html)
+
