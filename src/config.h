@@ -4,7 +4,7 @@
 /* Config file for soforth */
 
 // size of memory
-#define MAX 250
+#define MAX 250 // the max is this number -1 for under and overflow protection
 
 // size of script files
 #define MAX_SCRIPT 1024

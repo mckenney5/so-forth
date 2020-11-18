@@ -6,11 +6,6 @@
 #include "stack.h"
 #include "config.h"
 
-static void dup(){
-//copys the top most data on the stack
-	push(read_stack());
-}
-
 int check_words(char *word){
 /* this function should be called first from run()
  * returns 1 if a command was found, returns 0 if it wasnt
@@ -25,10 +20,13 @@ int check_words(char *word){
 
 	//TODO check for user defined words first
 
-	if(!strcmp("dup", word)) dup();
+	if(!strcmp("dup", word)) push(read_stack(0));
+	else if(!strcmp("2dup", word)){ push(read_stack(1)); push(read_stack(1));}
 	else if(!strcmp("spaces", word)){ temp = pop(); if(!get_error()) for(i=0; (long)i < temp; i++) putchar(' ');}
 	else if(!strcmp("emit", word)) putchar((char)pop());
 	else if(!strcmp("cr", word)) putchar('\n');
+	else if(!strcmp("space", word)) putchar(' ');
+
 	else return 0;
 	
 	return 1;

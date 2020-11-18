@@ -25,8 +25,12 @@ void show_stack(){
 	fflush(stdout);
 }
 
-long read_stack(){
-	return l_stack[l_index-1];
+long read_stack(size_t offset){
+	if(l_index - offset <= 0){
+		set_error(E_UNDERFLOW);
+		return 0;
+	} else
+		return l_stack[l_index -1 -offset];
 }
 
 long pop(){
