@@ -57,7 +57,7 @@ void handle_operator(char op){
 		case '-': push(n1 - n2); break;
 		case '/': push(n1 / n2); break;
 		case '*': push(n1 * n2); break;
-		case '%': push(n1 % n2); break;
+		case '%': push(((n1 % n2) + n2) % n2); break; //makes it compatible with gForth
 		default:
 			puts("Error in handle_operator");
 			return;

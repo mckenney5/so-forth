@@ -28,6 +28,8 @@ int check_words(char *word){
 	else if(!strcmp("emit", word)) putchar((char)pop(0));
 	else if(!strcmp("cr", word)) putchar('\n');
 	else if(!strcmp("space", word)) putchar(' ');
+	else if(!strcmp("mod", word)) handle_operator('%');
+
 
 	else return 0;
 	
