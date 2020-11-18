@@ -9,10 +9,19 @@
 
 static int error_id = 0;
 
+void set_error(int error){
+	error_id = error;
+}
+
+int get_error(){
+	return error_id;
+}
+
 static int check_error(){
-	switch(error_id){
+	switch(get_error()){
 		case 0: break;
-		case E_UNDERFLOW: fprintf(stderr, "%s underflow.", PADDING);    
+		case E_UNDERFLOW: fprintf(stderr, "%s underflow.", PADDING); break;
+		case E_UNDEFINED_WORD: fprintf(stderr, "%s undefined word.", PADDING); break;
 		default: printf("%s unknown error", PADDING);
 	}
 	return error_id;
@@ -60,8 +69,10 @@ void handle_operator(char op){
 
 void run(char *input){
 	char *t = NULL;
+	//size_t count = 0; //count commands
 	t = strtok(input, " ");
 	for(; t != NULL; t = strtok(NULL, " ")){
+		//count++; //TODO use this for errors
 		if(check_words(t));
 		else if(is_digit(t)) push(atoi(t));
 		else if(!strcmp(" ", t));
@@ -71,10 +82,10 @@ void run(char *input){
 			else error_id = E_UNDERFLOW;
 		else if(!strcmp(".s", t)) show_stack();
 		//else if(!strcmp("s\"")) ; //put a string and its size on the stack
-		else printf("Unknown command '%s'\n", t);
+		else error_id = E_UNDEFINED_WORD;
 		if(check_error()) break; //if there is an error, stop
 	}
-	if(!error_id) printf("%s ok", PADDING);
+	if(!get_error()) printf("%s ok", PADDING);
 	error_id = 0;
 }
 

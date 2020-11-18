@@ -6,7 +6,7 @@
 #include "stack.h"
 #include "config.h"
 
-void dup(){
+static void dup(){
 //copys the top most data on the stack
 	push(read_stack());
 }
@@ -16,6 +16,7 @@ int check_words(char *word){
  * returns 1 if a command was found, returns 0 if it wasnt
  * add new words above and here, dont forget to add them to the header
  */
+	long temp = 0;
 	// convert word to lowercase
 	size_t i = 0;
 	for(; word[i] != '\0'; i++){
@@ -24,7 +25,10 @@ int check_words(char *word){
 
 	//TODO check for user defined words first
 
-	if(!strcmp("dup", word)){ dup(); return 1;}
+	if(!strcmp("dup", word)) dup();
+	else if(!strcmp("spaces", word)){ temp = pop(); if(!get_error()) for(i=0; (long)i < temp; i++) putchar(' ');}
+	else if(!strcmp("emit", word)) putchar((char)pop());
 	else return 0;
-
+	
+	return 1;
 }

@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#include "interp.h"
 #include "config.h"
+#include "errors.h"
 
 static long l_stack[MAX] = {0};
 static size_t l_index = 1; //stack pointer, should point to top (1)
@@ -28,7 +30,7 @@ long read_stack(){
 
 long pop(){
 	if(l_index == 1){
-		puts("Stack Underflow");
+		set_error(E_UNDERFLOW);
 		return 0;
 	} else
 		return l_stack[--l_index];
