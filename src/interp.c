@@ -49,18 +49,15 @@ int is_operator(const char* input){
 }
 
 void handle_operator(char op){
-	
+	long n2 = pop(0);
+	long n1 = pop(0);
 
-	if(get_index() < 3){
-		puts("Underflow.");
-		return;
-	}
 	switch(op){
-		case '+': push(pop() + pop()); break;
-		case '-': push(pop() - pop()); break;
-		case '/': push(pop() / pop()); break;
-		case '*': push(pop() * pop()); break;
-		case '%': push(pop() % pop()); break;
+		case '+': push(n1 + n2); break;
+		case '-': push(n1 - n2); break;
+		case '/': push(n1 / n2); break;
+		case '*': push(n1 * n2); break;
+		case '%': push(n1 % n2); break;
 		default:
 			puts("Error in handle_operator");
 			return;
@@ -79,7 +76,7 @@ void run(char *input){
 		else if(!strcmp(" ", t));
 		else if(is_operator(t)) handle_operator(t[0]);
 		else if(!strcmp(".", t)) 
-			if(get_index() != 1) printf("%ld\n", pop());
+			if(get_index() != 1) printf("%ld\n", pop(0));
 			else error_id = E_UNDERFLOW;
 		else if(!strcmp(".s", t)) show_stack();
 		//else if(!strcmp("s\"")) ; //put a string and its size on the stack

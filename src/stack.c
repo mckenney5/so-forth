@@ -33,12 +33,12 @@ long read_stack(size_t offset){
 		return l_stack[l_index -1 -offset];
 }
 
-long pop(){
-	if(l_index == 1){
+long pop(size_t offset){
+	if(l_index - offset <= 1){
 		set_error(E_UNDERFLOW);
 		return 0;
 	} else
-		return l_stack[--l_index];
+		return l_stack[--l_index - offset];
 }
 
 /*void init(){

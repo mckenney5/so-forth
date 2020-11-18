@@ -4,7 +4,7 @@
 void push(const long data);
 void show_stack();
 long read_stack(size_t offset);
-long pop();
+long pop(size_t offset);
 size_t get_index();
 
 #endif

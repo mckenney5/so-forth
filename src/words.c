@@ -22,10 +22,10 @@ int check_words(char *word){
 
 	if(!strcmp("dup", word)) push(read_stack(0));
 	else if(!strcmp("2dup", word)){ push(read_stack(1)); push(read_stack(1));}
-	else if(!strcmp("drop", word)) pop();
-	else if(!strcmp("2drop", word)){ pop(); pop();}
-	else if(!strcmp("spaces", word)){ temp = pop(); if(!get_error()) for(i=0; (long)i < temp; i++) putchar(' ');}
-	else if(!strcmp("emit", word)) putchar((char)pop());
+	else if(!strcmp("drop", word)) pop(0);
+	else if(!strcmp("2drop", word)){ pop(0); pop(0);}
+	else if(!strcmp("spaces", word)){ temp = pop(0); if(!get_error()) for(i=0; (long)i < temp; i++) putchar(' ');}
+	else if(!strcmp("emit", word)) putchar((char)pop(0));
 	else if(!strcmp("cr", word)) putchar('\n');
 	else if(!strcmp("space", word)) putchar(' ');
 
