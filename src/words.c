@@ -28,6 +28,7 @@ int check_words(char *word){
 	if(!strcmp("dup", word)) dup();
 	else if(!strcmp("spaces", word)){ temp = pop(); if(!get_error()) for(i=0; (long)i < temp; i++) putchar(' ');}
 	else if(!strcmp("emit", word)) putchar((char)pop());
+	else if(!strcmp("cr", word)) putchar('\n');
 	else return 0;
 	
 	return 1;
