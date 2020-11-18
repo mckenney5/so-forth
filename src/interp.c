@@ -5,8 +5,27 @@
 #include "config.h"
 #include "stack.h"
 #include "words.h"
+#include "errors.h"
 
-//TODO static int error_flag = 0;
+static int error_id = 0;
+
+static int read_error(){
+	if(error_id){
+		error_id = 0;
+		return 1;
+	} else
+		return 0;
+}
+
+
+static void check_error(){
+	const char padding[] = "  ";
+	switch(read_error()){
+		case 0: printf("%s ok", padding); break;
+		case E_UNDERFLOW: fprintf(stderr, "%s underflow.", padding);    
+		default: printf("%s unknown error", padding);
+	}
+}
 
 int is_digit(const char* input){
 	if(input[0] == '-' && input[1] > '0' && input[1] <= 57) return 1;
@@ -21,7 +40,7 @@ int is_operator(const char* input){
 		case '-':
 		case '/':
 		case '*':
-		case '%': return 1;
+		case '%': return 1; //TODO check if this is standard
 		default:
 			return 0;
 	}
@@ -29,9 +48,11 @@ int is_operator(const char* input){
 }
 
 void handle_operator(char op){
+	
+
 	if(get_index() < 3){
 		puts("Underflow.");
-		return;	
+		return;
 	}
 	switch(op){
 		case '+': push(pop() + pop()); break;
@@ -54,10 +75,13 @@ void run(char *input){
 		else if(is_digit(t)) push(atoi(t));
 		else if(!strcmp(" ", t));
 		else if(is_operator(t)) handle_operator(t[0]);
-		else if(!strcmp(".", t)) printf("%ld\n", pop()); //TODO handle underflow
+		else if(!strcmp(".", t)) 
+			if(get_index() != 1) printf("%ld\n", pop());
+			else error_id = E_UNDERFLOW;
 		else if(!strcmp(".s", t)) show_stack();
+		//else if(!strcmp("s\"")) ; //put a string and its size on the stack
 		else printf("Unknown command '%s'\n", t);
-		
+		check_error();
 	}
 }
 
