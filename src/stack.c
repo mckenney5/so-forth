@@ -5,7 +5,7 @@
 #include "config.h"
 #include "errors.h"
 
-static long l_stack[MAX] = {0};
+static long l_stack[MAX] = {0}; //TODO linked list?
 static size_t l_index = 1; //stack pointer, should point to top (1)
 
 //static char* s_stack = NULL;
@@ -13,7 +13,8 @@ static size_t l_index = 1; //stack pointer, should point to top (1)
 
 void push(const long data){
 	if(l_index == 0) l_index = 1;
-	l_stack[l_index++] = data;
+	if(l_index+1 != MAX) l_stack[l_index++] = data;
+	else set_error(E_OVERFLOW);
 }
 
 void show_stack(){

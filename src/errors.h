@@ -3,6 +3,6 @@
 
 #define E_UNDERFLOW 1
 #define E_UNDEFINED_WORD 2
-
+#define E_OVERFLOW 3
 
 #endif
