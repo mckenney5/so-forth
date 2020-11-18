@@ -8,5 +8,6 @@
 150 / .s \ this should print out 5
 5 + .s \ this should print 10
 6 - .s \ this should print -4
-2 % .s \ this should print 2
+2 MOD .s \ this should print 2
+bye
 
