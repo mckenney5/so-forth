@@ -6,5 +6,6 @@ void show_stack();
 long read_stack(size_t offset);
 long pop(size_t offset);
 size_t get_index();
+void clear_stack();
 
 #endif

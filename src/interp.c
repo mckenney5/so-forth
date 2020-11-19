@@ -81,7 +81,7 @@ void run(char *input){
 		else if(!strcmp(".s", t)) show_stack();
 		//else if(!strcmp("s\"")) ; //put a string and its size on the stack
 		else error_id = E_UNDEFINED_WORD;
-		if(check_error()) break; //if there is an error, stop
+		if(check_error()){ clear_stack(); break;} //if there is an error, clean the stack and stop
 	}
 	if(!get_error()) printf("%s ok", PADDING);
 	error_id = 0;

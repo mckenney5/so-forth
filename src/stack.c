@@ -8,6 +8,8 @@
 static long l_stack[MAX] = {0}; //TODO linked list?
 static size_t l_index = 1; //stack pointer, should point to top (1)
 
+//static long *return_stack = NULL;
+
 //static char* s_stack = NULL;
 //static size_t s_index = 0;
 
@@ -49,3 +51,6 @@ size_t get_index(){
 	return l_index;
 }
 
+void clear_stack(){
+	l_index = 1;
+}
