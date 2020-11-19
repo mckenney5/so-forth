@@ -310,7 +310,7 @@ WORD - NAME - CATAGORY
 - [ ] ROLL                              CORE EXT
 - [ ] ROT         rote                  CORE
 - [ ] RSHIFT      r-shift               CORE
-- [ ] S"          s-quote               CORE
+- [X] S"          s-quote               CORE
 - [ ] S"          s-quote               FILE
 - [ ] S\>D         s-to-d                CORE
 - [ ] SAVE-BUFFERS                      BLOCK
@@ -349,7 +349,7 @@ WORD - NAME - CATAGORY
 - [ ] TO                                LOCAL
 - [ ] TRUE                              CORE EXT
 - [ ] TUCK                              CORE EXT
-- [ ] TYPE                              CORE
+- [X] TYPE                              CORE
 - [ ] U\.          u-dot                 CORE
 - [ ] U.R         u-dot-r               CORE EXT
 - [ ] U\<          u-less-than           CORE

@@ -79,7 +79,8 @@ void run(char *input){
 			if(get_index() != 1) printf("%ld\n", pop(0));
 			else error_id = E_UNDERFLOW;
 		else if(!strcmp(".s", t)) show_stack();
-		//else if(!strcmp("s\"")) ; //put a string and its size on the stack
+		else if(!strcmp("s\"", t)){ t = strtok(NULL, "\""); push_string(t);} //put a string and its size on the stack
+		
 		else error_id = E_UNDEFINED_WORD;
 		if(check_error()){ clear_stack(); break;} //if there is an error, clean the stack and stop
 	}
