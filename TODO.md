@@ -5,7 +5,7 @@ TODO
 - [ ] Add a road map
 - [ ] Add colors
 - [ ] Add error handeling
-- [ ] Review [ANSI Fort](https://www.taygeta.com/forth/dpansf.html)
+- [ ] Review [ANSI Forth](https://www.taygeta.com/forth/dpansf.html)
 - [ ] Fix bugs with Linenoise
 
 ## Standard Words
