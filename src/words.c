@@ -34,7 +34,7 @@ int check_words(char *word){
 	else if(!strcmp(".", word)){ ltemp = pop(0); if(!get_error()) printf("%ld\n", ltemp);}
 	else if(!strcmp(".s", word)) show_stack();
 	else if(!strcmp("*/", word)) push((read_stack(2) * read_stack(1) / pop(0)));
-
+	else if(!strcmp("page", word)) printf("[H[2J[3J"); //TODO not portable (from bash: clear > out.txt)
 
 
 	else return 0;

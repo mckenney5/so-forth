@@ -282,7 +282,7 @@ WORD - NAME - CATAGORY
 - [ ] ORDER                             SEARCH EXT
 - [ ] OVER                              CORE
 - [ ] PAD                               CORE EXT
-- [ ] PAGE                              FACILITY
+- [X] PAGE                              FACILITY
 - [ ] PARSE                             CORE EXT
 - [ ] PICK                              CORE EXT
 - [ ] POSTPONE                          CORE
