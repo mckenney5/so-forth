@@ -1,5 +1,6 @@
 /* words should be implemented here */
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
 #include "interp.h"
@@ -35,7 +36,8 @@ int check_words(char *word){
 	else if(!strcmp(".s", word)) show_stack();
 	else if(!strcmp("*/", word)) push((read_stack(2) * read_stack(1) / pop(0)));
 	else if(!strcmp("page", word)) printf("[H[2J[3J"); //TODO not portable (from bash: clear > out.txt)
-
+	
+	else if(!strcmp("system", word)){ pop(0); putchar(' '); system((char*)pop(0));} //NON-STANDARD
 
 	else return 0;
 	
