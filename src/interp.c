@@ -29,8 +29,8 @@ static int check_error(){
 }
 
 int is_digit(const char* input){
-	if(input[0] == '-' && input[1] > '0' && input[1] <= 57) return 1;
-	else if(input[0] > '0' && input[0] <= '9') return 1;
+	if(input[0] == '-' && input[1] >= '0' && input[1] <= 57) return 1;
+	else if(input[0] >= '0' && input[0] <= '9') return 1;
 	else return 0;
 }
 
