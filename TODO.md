@@ -20,7 +20,7 @@ WORD - NAME - CATAGORY
 - [ ] \(           paren                 FILE
 - [ ] \(LOCAL\)     paren-local-paren     LOCAL
 - [X] \*           star                  CORE
-- [ ] \*/          star-slash            CORE
+- [X] \*/          star-slash            CORE
 - [ ] \*/MOD       star-slash-mod        CORE
 - [X] \+           plus                  CORE
 - [ ] \+!          plus-store            CORE
@@ -192,7 +192,7 @@ WORD - NAME - CATAGORY
 - [ ] FALIGN      f-align               FLOATING
 - [ ] FALIGNED    f-aligned             FLOATING
 - [ ] FALOG       f-a-log               FLOATING EXT
-- [ ] FALSE                             CORE EXT
+- [X] FALSE                             CORE EXT
 - [ ] FASIN       f-a-sine              FLOATING EXT
 - [ ] FASINH      f-a-cinch             FLOATING EXT
 - [ ] FATAN       f-a-tan               FLOATING EXT
@@ -347,7 +347,7 @@ WORD - NAME - CATAGORY
 - [ ] TIME&DATE   time-and-date         FACILITY EXT
 - [ ] TO                                CORE EXT
 - [ ] TO                                LOCAL
-- [ ] TRUE                              CORE EXT
+- [X] TRUE                              CORE EXT
 - [ ] TUCK                              CORE EXT
 - [X] TYPE                              CORE
 - [ ] U\.          u-dot                 CORE
