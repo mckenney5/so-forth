@@ -2,6 +2,8 @@ Scripting Oriented Forth
 ========================
 soforth - _yet another forth interpreter_
 
+![screen shot](https://github.com/mckenney5/so-forth/raw/main/soforth.gif)
+
 ## Description
 A forth interpreter written in C.
 
