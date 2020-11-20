@@ -30,7 +30,7 @@ WORD - NAME - CATAGORY
 - [X] \-           minus                 CORE
 - [ ] \-TRAILING   dash-trailing         STRING
 - [X] \.           dot                   CORE
-- [ ] ."          dot-quote             CORE
+- [X] ."          dot-quote             CORE
 - [ ] .(          dot-paren             CORE EXT
 - [ ] .R          dot-r                 CORE EXT
 - [X] .S          dot-s                 TOOLS
@@ -62,11 +62,11 @@ WORD - NAME - CATAGORY
 - [ ] :NONAME     colon-no-name         CORE EXT
 - [ ] ;           semicolon             CORE
 - [ ] ;CODE       semicolon-code        TOOLS EXT
-- [ ] <           less-than             CORE
+- [X] <           less-than             CORE
 - [ ] <#          less-number-sign      CORE
 - [ ] <>          not-equals            CORE EXT
-- [ ] =           equals                CORE
-- [ ] \>           greater-than          CORE
+- [X] =           equals                CORE
+- [X] \>           greater-than          CORE
 - [ ] \>BODY       to-body               CORE
 - [ ] \>FLOAT      to-float              FLOATING
 - [ ] \>IN         to-in                 CORE
@@ -254,7 +254,7 @@ WORD - NAME - CATAGORY
 - [ ] IMMEDIATE                         CORE
 - [ ] INCLUDE-FILE                      FILE
 - [ ] INCLUDED                          FILE
-- [ ] INVERT                            CORE
+- [X] INVERT                            CORE
 - [ ] J                                 CORE
 - [ ] KEY                               CORE
 - [ ] KEY?        key-question          FACILITY

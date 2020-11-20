@@ -38,7 +38,7 @@ int check_words(char *word){
 	else if(!strcmp("page", word)) printf("[H[2J[3J"); //TODO not portable (from bash: clear > out.txt)
 	else if(!strcmp("true", word)) push(-1);
 	else if(!strcmp("false", word)) push(0);
-	
+	else if(!strcmp("invert", word)) push(~ pop(0));	
 	
 	else if(!strcmp("system", word)){ pop(0); system((char*)pop(0));} //NON-STANDARD
 
