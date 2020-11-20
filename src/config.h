@@ -3,7 +3,7 @@
 
 /* Config file for soforth */
 
-// size of memory
+// size of data stack
 #define MAX 250 // the max is this number -1 for under and overflow protection
 
 // size of script files
@@ -12,13 +12,20 @@
 // what is displayed to the user
 #define PROMPT ""
 
+// version number
+#define VERSION "Alpha 0.0.1"
+#ifdef DEBUGGING
+	#define VERSION_FULL VERSION " DEBUGGING"
+#else
+	#define VERSION_FULL VERSION
+#endif
 
-#define MOTD "~soforth~\nTo exit, type 'bye'"
+#define MOTD "~soforth " VERSION_FULL "~\nTo exit, type 'bye'"
 
 // padding of interp input
 #define PADDING " "
 
-// Forths true and false staement
+// Forths true and false statement
 #define _TRUE -1
 #define _FALSE 0
 
