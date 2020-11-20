@@ -16,10 +16,10 @@
 - [X] ."          dot-quote             CORE
 - [X] /           slash                 CORE
 - [ ] /MOD        slash-mod             CORE
-- [ ] 0\<          zero-less             CORE
-- [ ] 0=          zero-equals           CORE
-- [ ] 1\+          one-plus              CORE
-- [ ] 1\-          one-minus             CORE
+- [X] 0\<          zero-less             CORE
+- [X] 0=          zero-equals           CORE
+- [X] 1\+          one-plus              CORE
+- [X] 1\-          one-minus             CORE
 - [ ] 2!          two-store             CORE
 - [ ] 2\*          two-star              CORE
 - [ ] 2/          two-slash             CORE

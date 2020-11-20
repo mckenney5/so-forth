@@ -40,7 +40,11 @@ int check_words(char *word){
 	else if(!strcmp("false", word)) push(_FALSE);
 	else if(!strcmp("invert", word)) push(~ pop(0));
 	else if(!strcmp("<>", word)){ ltemp = pop(0); if((pop(0) ^ ltemp) != 0) push(_TRUE); else push(_FALSE);} //XOR's to check bit-for-bit not equal to
-	
+	else if(!strcmp("0<", word)) if(pop(0) < 0) push(_TRUE); else push(_FALSE);
+	else if(!strcmp("0=", word)) if(pop(0) == 0) push(_TRUE); else push(_FALSE);
+	else if(!strcmp("1+", word)) push(pop(0) +1);
+	else if(!strcmp("1-", word)) push(pop(0) -1);
+
 	else if(!strcmp("system", word)){ pop(0); system((char*)pop(0));} //NON-STANDARD
 
 	else return 0;
