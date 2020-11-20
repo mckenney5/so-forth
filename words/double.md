@@ -1,0 +1,22 @@
+- [ ] 2CONSTANT   two-constant          DOUBLE
+- [ ] 2LITERAL    two-literal           DOUBLE
+- [ ] 2ROT        two-rote              DOUBLE EXT
+- [ ] 2VARIABLE   two-variable          DOUBLE
+- [ ] D\+          d-plus                DOUBLE
+- [ ] D-          d-minus               DOUBLE
+- [ ] D\.          d-dot                 DOUBLE
+- [ ] D.R         d-dot-r               DOUBLE
+- [ ] D0\<         d-zero-less           DOUBLE
+- [ ] D0=         d-zero-equals         DOUBLE
+- [ ] D2\*         d-two-star            DOUBLE
+- [ ] D2/         d-two-slash           DOUBLE
+- [ ] D\<          d-less-than           DOUBLE
+- [ ] D=          d-equals              DOUBLE
+- [ ] D\>S         d-to-s                DOUBLE
+- [ ] DABS        d-abs                 DOUBLE
+- [ ] DMAX        d-max                 DOUBLE
+- [ ] DMIN        d-min                 DOUBLE
+- [ ] DNEGATE     d-negate              DOUBLE
+- [ ] DU\<         d-u-less              DOUBLE EXT
+- [ ] M\*/         m-star-slash          DOUBLE
+- [ ] M+          m-plus                DOUBLE

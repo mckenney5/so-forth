@@ -1,0 +1,46 @@
+- [ ] #TIB        number-t-i-b          CORE EXT
+- [ ] .(          dot-paren             CORE EXT
+- [ ] .R          dot-r                 CORE EXT
+- [ ] 0\<\>         zero-not-equals       CORE EXT
+- [ ] 0\>          zero-greater          CORE EXT
+- [ ] 2\>R         two-to-r              CORE EXT
+- [ ] 2R>         two-r-from            CORE EXT
+- [ ] 2R@         two-r-fetch           CORE EXT
+- [ ] :NONAME     colon-no-name         CORE EXT
+- [X] <>          not-equals            CORE EXT
+- [ ] ?DO         question-do           CORE EXT
+- [ ] AGAIN                             CORE EXT
+- [ ] C"          c-quote               CORE EXT
+- [ ] CASE                              CORE EXT
+- [ ] COMPILE,    compile-comma         CORE EXT
+- [ ] CONVERT                           CORE EXT
+- [ ] ENDCASE     end-case              CORE EXT
+- [ ] ENDOF       end-of                CORE EXT
+- [ ] ERASE                             CORE EXT
+- [ ] EXPECT                            CORE EXT
+- [X] FALSE                             CORE EXT
+- [ ] HEX                               CORE EXT
+- [ ] MARKER                            CORE EXT
+- [ ] NIP                               CORE EXT
+- [ ] OF                                CORE EXT
+- [ ] PAD                               CORE EXT
+- [ ] PARSE                             CORE EXT
+- [ ] PICK                              CORE EXT
+- [ ] QUERY                             CORE EXT
+- [ ] REFILL                            CORE EXT
+- [ ] RESTORE-INPUT                     CORE EXT
+- [ ] ROLL                              CORE EXT
+- [ ] SAVE-INPUT                        CORE EXT
+- [ ] SOURCE-ID   source-i-d            CORE EXT
+- [ ] SPAN                              CORE EXT
+- [ ] TIB         t-i-b                 CORE EXT
+- [ ] TO                                CORE EXT
+- [X] TRUE                              CORE EXT
+- [ ] TUCK                              CORE EXT
+- [ ] U.R         u-dot-r               CORE EXT
+- [ ] U\>          u-greater-than        CORE EXT
+- [ ] UNUSED                            CORE EXT
+- [ ] VALUE                             CORE EXT
+- [ ] WITHIN                            CORE EXT
+- [ ] \[COMPILE\]   bracket-compile       CORE EXT
+- [ ] \           backslash             CORE EXT

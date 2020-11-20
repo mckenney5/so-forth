@@ -1,0 +1,133 @@
+- [ ] !           store                 CORE
+- [ ] #           number-sign           CORE
+- [ ] #>          number-sign-greater   CORE
+- [ ] #S          number-sign-s         CORE
+- [ ] '           tick                  CORE
+- [ ] \(           paren                 CORE
+- [X] \*           star                  CORE
+- [X] \*/          star-slash            CORE
+- [ ] \*/MOD       star-slash-mod        CORE
+- [X] \+           plus                  CORE
+- [ ] \+!          plus-store            CORE
+- [ ] \+LOOP       plus-loop             CORE
+- [ ] ,           comma                 CORE
+- [X] \-           minus                 CORE
+- [X] \.           dot                   CORE
+- [X] ."          dot-quote             CORE
+- [X] /           slash                 CORE
+- [ ] /MOD        slash-mod             CORE
+- [ ] 0\<          zero-less             CORE
+- [ ] 0=          zero-equals           CORE
+- [ ] 1\+          one-plus              CORE
+- [ ] 1\-          one-minus             CORE
+- [ ] 2!          two-store             CORE
+- [ ] 2\*          two-star              CORE
+- [ ] 2/          two-slash             CORE
+- [ ] 2@          two-fetch             CORE
+- [X] 2DROP       two-drop              CORE
+- [X] 2DUP        two-dupe              CORE
+- [ ] 2OVER       two-over              CORE
+- [ ] 2SWAP       two-swap              CORE
+- [ ] :           colon                 CORE
+- [ ] ;           semicolon             CORE
+- [X] <           less-than             CORE
+- [ ] <#          less-number-sign      CORE
+- [X] =           equals                CORE
+- [X] \>           greater-than          CORE
+- [ ] \>BODY       to-body               CORE
+- [ ] \>IN         to-in                 CORE
+- [ ] \>NUMBER     to-number             CORE
+- [ ] \>R          to-r                  CORE
+- [ ] ?DUP        question-dupe         CORE
+- [ ] @           fetch                 CORE
+- [ ] ABORT                             CORE
+- [ ] ABORT"      abort-quote           CORE
+- [ ] ABS         abs                   CORE
+- [ ] ACCEPT                            CORE
+- [ ] ALIGN                             CORE
+- [ ] ALIGNED                           CORE
+- [ ] ALLOT                             CORE
+- [ ] AND                               CORE
+- [ ] BASE                              CORE
+- [ ] BEGIN                             CORE
+- [ ] BL          b-l                   CORE
+- [ ] C!          c-store               CORE
+- [ ] C,          c-comma               CORE
+- [ ] C@          c-fetch               CORE
+- [ ] CELL+       cell-plus             CORE
+- [ ] CELLS                             CORE
+- [ ] CHAR        char                  CORE
+- [ ] CHAR\+       char-plus             CORE
+- [ ] CHARS       chars                 CORE
+- [ ] CONSTANT                          CORE
+- [ ] COUNT                             CORE
+- [X] CR          c-r                   CORE
+- [ ] CREATE                            CORE
+- [ ] DECIMAL                           CORE
+- [ ] DEPTH                             CORE
+- [ ] DO                                CORE
+- [ ] DOES\>       does                  CORE
+- [X] DROP                              CORE
+- [X] DUP         dupe                  CORE
+- [ ] ELSE                              CORE
+- [X] EMIT                              CORE
+- [ ] ENVIRONMENT? environment-query     CORE
+- [ ] EVALUATE                          CORE
+- [ ] EXECUTE                           CORE
+- [ ] EXIT                              CORE
+- [ ] FILL                              CORE
+- [ ] FIND                              CORE
+- [ ] FM/MOD      f-m-slash-mod         CORE
+- [ ] HERE                              CORE
+- [ ] HOLD                              CORE
+- [ ] I                                 CORE
+- [ ] IF                                CORE
+- [ ] IMMEDIATE                         CORE
+- [X] INVERT                            CORE
+- [ ] J                                 CORE
+- [ ] KEY                               CORE
+- [ ] LEAVE                             CORE
+- [ ] LITERAL                           CORE
+- [ ] LOOP                              CORE
+- [ ] LSHIFT      l-shift               CORE
+- [ ] M\*          m-star                CORE
+- [ ] MAX                               CORE
+- [ ] MIN                               CORE
+- [ ] MOD                               CORE
+- [ ] MOVE                              CORE
+- [ ] NEGATE                            CORE
+- [ ] OR                                CORE
+- [ ] OVER                              CORE
+- [ ] POSTPONE                          CORE
+- [ ] QUIT                              CORE
+- [ ] R\>          r-from                CORE
+- [ ] R@          r-fetch               CORE
+- [ ] RECURSE                           CORE
+- [ ] REPEAT                            CORE
+- [ ] ROT         rote                  CORE
+- [ ] RSHIFT      r-shift               CORE
+- [X] S"          s-quote               CORE
+- [ ] S\>D         s-to-d                CORE
+- [ ] SIGN                              CORE
+- [ ] SM/REM      s-m-slash-rem         CORE
+- [ ] SOURCE                            CORE
+- [X] SPACE                             CORE
+- [X] SPACES                            CORE
+- [ ] STATE                             CORE
+- [ ] SWAP                              CORE
+- [ ] THEN                              CORE
+- [X] TYPE                              CORE
+- [ ] U\.          u-dot                 CORE
+- [ ] U\<          u-less-than           CORE
+- [ ] UM\*         u-m-star              CORE
+- [ ] UM/MOD      u-m-slash-mod         CORE
+- [ ] UNLOOP                            CORE
+- [ ] UNTIL                             CORE
+- [ ] VARIABLE                          CORE
+- [ ] WHILE                             CORE
+- [ ] WORD                              CORE
+- [ ] XOR         x-or                  CORE
+- [ ] \[           left-bracket          CORE
+- [ ] \['\]         bracket-tick          CORE
+- [ ] \[CHAR\]      bracket-char          CORE
+- [ ] \]           right-bracket         CORE

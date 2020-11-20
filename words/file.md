@@ -1,0 +1,25 @@
+- [ ] \(           paren                 FILE
+- [ ] BIN                               FILE
+- [ ] CLOSE-FILE                        FILE
+- [ ] CREATE-FILE                       FILE
+- [ ] DELETE-FILE                       FILE
+- [ ] FILE-POSITION                     FILE
+- [ ] FILE-SIZE                         FILE
+- [ ] FILE-STATUS                       FILE EXT
+- [ ] FLUSH-FILE                        FILE EXT
+- [ ] INCLUDE-FILE                      FILE
+- [ ] INCLUDED                          FILE
+- [ ] OPEN-FILE                         FILE
+- [ ] R/O         r-o                   FILE
+- [ ] R/W         r-w                   FILE
+- [ ] READ-FILE                         FILE
+- [ ] READ-LINE                         FILE
+- [ ] REFILL                            FILE EXT
+- [ ] RENAME-FILE                       FILE EXT
+- [ ] REPOSITION-FILE                   FILE
+- [ ] RESIZE-FILE                       FILE
+- [ ] S"          s-quote               FILE
+- [ ] SOURCE-ID   source-i-d            FILE
+- [ ] W/O         w-o                   FILE
+- [ ] WRITE-FILE                        FILE
+- [ ] WRITE-LINE                        FILE

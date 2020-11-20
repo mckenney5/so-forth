@@ -1,0 +1,8 @@
+- [ ] \-TRAILING   dash-trailing         STRING
+- [ ] /STRING     slash-string          STRING
+- [ ] BLANK                             STRING
+- [ ] CMOVE       c-move                STRING
+- [ ] CMOVE\>      c-move-up             STRING
+- [ ] COMPARE                           STRING
+- [ ] SEARCH                            STRING
+- [ ] SLITERAL                          STRING

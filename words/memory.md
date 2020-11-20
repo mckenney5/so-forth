@@ -1,0 +1,3 @@
+- [ ] ALLOCATE                          MEMORY
+- [ ] FREE                              MEMORY
+- [ ] RESIZE                            MEMORY

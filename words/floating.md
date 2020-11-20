@@ -1,0 +1,72 @@
+- [ ] \>FLOAT      to-float              FLOATING
+- [ ] D\>F         d-to-f                FLOATING
+- [ ] DF!         d-f-store             FLOATING EXT
+- [ ] DF@         d-f-fetch             FLOATING EXT
+- [ ] DFALIGN     d-f-align             FLOATING EXT
+- [ ] DFALIGNED   d-f-aligned           FLOATING EXT
+- [ ] DFLOAT\+     d-float-plus          FLOATING EXT
+- [ ] DFLOATS     d-floats              FLOATING EXT
+- [ ] F!          f-store               FLOATING
+- [ ] F\*          f-star                FLOATING
+- [ ] F\*\*         f-star-star           FLOATING EXT
+- [ ] F\+          f-plus                FLOATING
+- [ ] F-          f-minus               FLOATING
+- [ ] F\.          f-dot                 FLOATING EXT
+- [ ] F/          f-slash               FLOATING
+- [ ] F0\<         f-zero-less-than      FLOATING
+- [ ] F0=         f-zero-equals         FLOATING
+- [ ] F\<          f-less-than           FLOATING
+- [ ] F\>D         f-to-d                FLOATING
+- [ ] F@          f-fetch               FLOATING
+- [ ] FABS        f-abs                 FLOATING EXT
+- [ ] FACOS       f-a-cos               FLOATING EXT
+- [ ] FACOSH      f-a-cosh              FLOATING EXT
+- [ ] FALIGN      f-align               FLOATING
+- [ ] FALIGNED    f-aligned             FLOATING
+- [ ] FALOG       f-a-log               FLOATING EXT
+- [ ] FASIN       f-a-sine              FLOATING EXT
+- [ ] FASINH      f-a-cinch             FLOATING EXT
+- [ ] FATAN       f-a-tan               FLOATING EXT
+- [ ] FATAN2      f-a-tan-two           FLOATING EXT
+- [ ] FATANH      f-a-tan-h             FLOATING EXT
+- [ ] FCONSTANT   f-constant            FLOATING
+- [ ] FCOS        f-cos                 FLOATING EXT
+- [ ] FCOSH       f-cosh                FLOATING EXT
+- [ ] FDEPTH      f-depth               FLOATING
+- [ ] FDROP       f-drop                FLOATING
+- [ ] FDUP        f-dupe                FLOATING
+- [ ] FE\.         f-e-dot               FLOATING EXT
+- [ ] FEXP        f-e-x-p               FLOATING EXT
+- [ ] FEXPM1      f-e-x-p-m-one         FLOATING EXT
+- [ ] FLITERAL    f-literal             FLOATING
+- [ ] FLN         f-l-n                 FLOATING EXT
+- [ ] FLNP1       f-l-n-p-one           FLOATING EXT
+- [ ] FLOAT\+      float-plus            FLOATING
+- [ ] FLOATS                            FLOATING
+- [ ] FLOG        f-log                 FLOATING EXT
+- [ ] FLOOR                             FLOATING
+- [ ] FMAX        f-max                 FLOATING
+- [ ] FMIN        f-min                 FLOATING
+- [ ] FNEGATE     f-negate              FLOATING
+- [ ] FOVER       f-over                FLOATING
+- [ ] FROT        f-rote                FLOATING
+- [ ] FROUND      f-round               FLOATING
+- [ ] FS\.         f-s-dot               FLOATING EXT
+- [ ] FSIN        f-sine                FLOATING EXT
+- [ ] FSINCOS     f-sine-cos            FLOATING EXT
+- [ ] FSINH       f-cinch               FLOATING EXT
+- [ ] FSQRT       f-square-root         FLOATING EXT
+- [ ] FSWAP       f-swap                FLOATING
+- [ ] FTAN        f-tan                 FLOATING EXT
+- [ ] FTANH       f-tan-h               FLOATING EXT
+- [ ] FVARIABLE   f-variable            FLOATING
+- [ ] F~          f-proximate           FLOATING EXT
+- [ ] PRECISION                         FLOATING EXT
+- [ ] REPRESENT                         FLOATING
+- [ ] SET-PRECISION                     FLOATING EXT
+- [ ] SF!         s-f-store             FLOATING EXT
+- [ ] SF@         s-f-fetch             FLOATING EXT
+- [ ] SFALIGN     s-f-align             FLOATING EXT
+- [ ] SFALIGNED   s-f-aligned           FLOATING EXT
+- [ ] SFLOAT+     s-float-plus          FLOATING EXT
+- [ ] SFLOATS     s-floats              FLOATING EXT

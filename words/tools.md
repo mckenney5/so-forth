@@ -1,0 +1,18 @@
+- [X] .S          dot-s                 TOOLS
+- [ ] ;CODE       semicolon-code        TOOLS EXT
+- [ ] ?           question              TOOLS
+- [ ] AHEAD                             TOOLS EXT
+- [ ] ASSEMBLER                         TOOLS EXT
+- [X] BYE                               TOOLS EXT
+- [ ] CODE                              TOOLS EXT
+- [ ] CS-PICK     c-s-pick              TOOLS EXT
+- [ ] CS-ROLL     c-s-roll              TOOLS EXT
+- [ ] DUMP                              TOOLS
+- [ ] EDITOR                            TOOLS EXT
+- [ ] FORGET                            TOOLS EXT
+- [ ] SEE                               TOOLS
+- [ ] STATE                             TOOLS EXT
+- [ ] WORDS                             TOOLS
+- [ ] \[ELSE\]      bracket-else          TOOLS EXT
+- [ ] \[IF\]        bracket-if            TOOLS EXT
+- [ ] \[THEN\]      bracket-then          TOOLS EXT
