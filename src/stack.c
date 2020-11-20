@@ -56,7 +56,7 @@ void clear_stack(){
 void* push_string(char* str){
 // allocates the string and pushes its address and size to the data stack
 	void* temp = NULL;
-	temp = malloc(sizeof(char) * strlen(str));
+	temp = calloc(sizeof(char), strlen(str)+1); //makesure it is null terminated
 	
 	//TODO check for NULL?
 	strncpy(temp, str, strlen(str));
