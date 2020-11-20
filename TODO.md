@@ -6,6 +6,7 @@ TODO
 - [ ] Add colors
 - [ ] Add error handeling
 - [ ] Review [ANSI Fort](https://www.taygeta.com/forth/dpansf.html)
+- [ ] Fix bugs with Linenoise
 
 ## Standard Words
 WORD - NAME - CATAGORY

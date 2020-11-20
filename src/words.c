@@ -40,7 +40,7 @@ int check_words(char *word){
 	else if(!strcmp("false", word)) push(0);
 	
 	
-	else if(!strcmp("system", word)){ pop(0); putchar(' '); system((char*)pop(0));} //NON-STANDARD
+	else if(!strcmp("system", word)){ pop(0); system((char*)pop(0));} //NON-STANDARD
 
 	else return 0;
 	
