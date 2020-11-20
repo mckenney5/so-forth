@@ -31,6 +31,9 @@ int check_words(char *word){
 	else if(!strcmp("space", word)) putchar(' ');
 	else if(!strcmp("mod", word)) handle_operator('%');
 	else if(!strcmp("type", word)){ ltemp = pop(0); stemp = (char*)pop(0); for(i=0; (long)i < ltemp; i++)putchar(stemp[i]); pop_string(stemp);} //TODO check for segfaults?
+	else if(!strcmp(".", word)){ ltemp = pop(0); if(!get_error()) printf("%ld\n", ltemp);}
+	else if(!strcmp(".s", word)) show_stack();
+	else if(!strcmp("*/", word)) push((read_stack(2) * read_stack(1) / pop(0)));
 
 
 

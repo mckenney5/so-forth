@@ -72,16 +72,13 @@ void run(char *input){
 	for(; t != NULL; t = strtok(NULL, " ")){
 		//count++; //TODO use this for errors
 		if(check_words(t));
-		else if(is_digit(t)) push(atoi(t));
 		else if(!strcmp(" ", t));
 		else if(is_operator(t)) handle_operator(t[0]);
-		else if(!strcmp(".", t)) 
-			if(get_index() != 1) printf("%ld\n", pop(0));
-			else error_id = E_UNDERFLOW;
-		else if(!strcmp(".s", t)) show_stack();
 		else if(!strcmp("s\"", t)){ t = strtok(NULL, "\""); push_string(t);} //put a string and its size on the stack
-		
+		else if(is_digit(t)) push(atoi(t));
+
 		else error_id = E_UNDEFINED_WORD;
+		
 		if(check_error()){ clear_stack(); break;} //if there is an error, clean the stack and stop
 	}
 	if(!get_error()) printf("%s ok", PADDING);
