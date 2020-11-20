@@ -36,9 +36,10 @@ int check_words(char *word){
 	else if(!strcmp(".s", word)) show_stack();
 	else if(!strcmp("*/", word)) push((read_stack(2) * read_stack(1) / pop(0)));
 	else if(!strcmp("page", word)) printf("[H[2J[3J"); //TODO not portable (from bash: clear > out.txt)
-	else if(!strcmp("true", word)) push(-1);
-	else if(!strcmp("false", word)) push(0);
-	else if(!strcmp("invert", word)) push(~ pop(0));	
+	else if(!strcmp("true", word)) push(_TRUE);
+	else if(!strcmp("false", word)) push(_FALSE);
+	else if(!strcmp("invert", word)) push(~ pop(0));
+	else if(!strcmp("<>", word)){ ltemp = pop(0); if((pop(0) ^ ltemp) != 0) push(_TRUE); else push(_FALSE);} //XOR's to check bit-for-bit not equal to
 	
 	else if(!strcmp("system", word)){ pop(0); system((char*)pop(0));} //NON-STANDARD
 

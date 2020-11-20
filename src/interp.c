@@ -60,9 +60,9 @@ void handle_operator(char op){
 		case '-': push(n1 - n2); break;
 		case '/': push(n1 / n2); break;
 		case '*': push(n1 * n2); break;
-		case '>': if(n1 > n2) push(-1); else push(0); break;
-		case '<': if(n1 < n2) push(-1); else push(0); break;
-		case '=': if(n1 == n2) push(-1); else push(0); break;
+		case '>': if(n1 > n2) push(_TRUE); else push(_FALSE); break;
+		case '<': if(n1 < n2) push(_TRUE); else push(_FALSE); break;
+		case '=': if(n1 == n2) push(_TRUE); else push(_FALSE); break;
 		case '%': push(((n1 % n2) + n2) % n2); break; //makes it compatible with gForth
 		default:
 			puts("Error in handle_operator");

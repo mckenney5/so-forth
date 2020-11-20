@@ -64,7 +64,7 @@ WORD - NAME - CATAGORY
 - [ ] ;CODE       semicolon-code        TOOLS EXT
 - [X] <           less-than             CORE
 - [ ] <#          less-number-sign      CORE
-- [ ] <>          not-equals            CORE EXT
+- [X] <>          not-equals            CORE EXT
 - [X] =           equals                CORE
 - [X] \>           greater-than          CORE
 - [ ] \>BODY       to-body               CORE

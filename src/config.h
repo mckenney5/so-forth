@@ -18,4 +18,8 @@
 // padding of interp input
 #define PADDING " "
 
+// Forths true and false staement
+#define _TRUE -1
+#define _FALSE 0
+
 #endif
