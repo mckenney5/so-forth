@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <math.h>
 
 #include "interp.h"
 #include "stack.h"
@@ -14,12 +15,8 @@ int check_words(char *word){
  */
 	long ltemp = 0;
 	char* stemp = 0;
-	// convert word to lowercase
 	size_t i = 0;
-	for(; word[i] != '\0'; i++){
-		if(word[i] >= 'A' && word[i] <= 'Z') word[i] = word[i] + 32;
-	}
-
+	
 	//TODO check for user defined words first
 
 	if(!strcmp("dup", word)) push(read_stack(0));
@@ -44,6 +41,8 @@ int check_words(char *word){
 	else if(!strcmp("0=", word)) if(pop(0) == 0) push(_TRUE); else push(_FALSE);
 	else if(!strcmp("1+", word)) push(pop(0) +1);
 	else if(!strcmp("1-", word)) push(pop(0) -1);
+	else if(!strcmp("abs", word)){ if(read_stack(0) < 0) push(pop(0) * -1);}
+
 
 	else if(!strcmp("system", word)){ pop(0); system((char*)pop(0));} //NON-STANDARD
 
