@@ -89,6 +89,7 @@ void run(char *input){
 		else if(is_operator(t)) handle_operator(t[0]);
 		else if(!strcmp(".\"", t)){ t = strtok(NULL, "\""); printf("%s", t);} //put a string and its size on the stack
 		else if(!strcmp("s\"", t)){ t = strtok(NULL, "\""); push_string(t);} //put a string and its size on the stack
+		else if(!strcmp("exit", t)) break; //NON-STANDARD (interpretation is undefined so this brings the user back to the interp.)
 		else if(is_digit(t)) push(atoll(t));
 
 		else error_id = E_UNDEFINED_WORD;
