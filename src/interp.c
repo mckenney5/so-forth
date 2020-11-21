@@ -27,7 +27,12 @@ static int check_error(){
 	}
 	return error_id;
 }
-
+static void to_lower(char* word){
+	// convert word to lowercase
+	size_t i = 0;
+	for(; word[i] != '\0'; i++)
+		if(word[i] >= 'A' && word[i] <= 'Z') word[i] = word[i] + 32;
+}
 int is_digit(const char* input){
 	if(input[0] == '-' && input[1] >= '0' && input[1] <= 57) return 1;
 	else if(input[0] >= '0' && input[0] <= '9') return 1;
@@ -77,12 +82,13 @@ void run(char *input){
 	t = strtok(input, " ");
 	for(; t != NULL; t = strtok(NULL, " ")){
 		//count++; //TODO use this for errors
+		to_lower(t);
 		if(check_words(t));
 		else if(!strcmp(" ", t));
 		else if(is_operator(t)) handle_operator(t[0]);
 		else if(!strcmp(".\"", t)){ t = strtok(NULL, "\""); printf("%s", t);} //put a string and its size on the stack
 		else if(!strcmp("s\"", t)){ t = strtok(NULL, "\""); push_string(t);} //put a string and its size on the stack
-		else if(is_digit(t)) push(atoi(t));
+		else if(is_digit(t)) push(atoll(t));
 
 		else error_id = E_UNDEFINED_WORD;
 		
