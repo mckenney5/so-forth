@@ -661,13 +661,15 @@ static size_t promptTextColumnLen(const char *prompt, size_t plen) {
  * cursor position, and number of columns of the terminal. */
 static void refreshSingleLine(struct linenoiseState *l) {
     char seq[64];
-    size_t pcollen = promptTextColumnLen(l->prompt,strlen(l->prompt));
+    size_t pcollen = promptTextColumnLen(l->prompt,l->plen); // MODIFIED
     int fd = l->ofd;
     char *buf = l->buf;
     size_t len = l->len;
     size_t pos = l->pos;
     struct abuf ab;
-
+    int offset = 0; // MODIFIED
+    if(pcollen == 0 && len == 0) offset = 1; // MODIFIED
+    
     while((pcollen+columnPos(buf,len,pos)) >= l->cols) {
         int chlen = nextCharLen(buf,len,0,NULL);
         buf += chlen;
@@ -683,7 +685,7 @@ static void refreshSingleLine(struct linenoiseState *l) {
     snprintf(seq,64,"\r");
     abAppend(&ab,seq,strlen(seq));
     /* Write the prompt and the current buffer content */
-    abAppend(&ab,l->prompt,strlen(l->prompt));
+    abAppend(&ab,l->prompt,l->plen);
     abAppend(&ab,buf,len);
     /* Show hits if any. */
     refreshShowHints(&ab,l,pcollen);
@@ -692,7 +694,7 @@ static void refreshSingleLine(struct linenoiseState *l) {
     abAppend(&ab,seq,strlen(seq));
     /* Move cursor to original position. */
 //    snprintf(seq,64,"\r\x1b[%dC", (int)(pos+strlenPerceived(l->prompt)));
-    snprintf(seq,64,"\r\x1b[%dC", (int)(columnPos(buf,len,pos)+pcollen));
+    snprintf(seq,64,"\r\x1b[%dC", (int)(columnPos(buf,len,pos)+pcollen - offset)); //MODIFIED
     abAppend(&ab,seq,strlen(seq));
     if (write(fd,ab.b,ab.len) == -1) {} /* Can't recover from write error. */
     abFree(&ab);
@@ -974,7 +976,7 @@ static int linenoiseEdit(int stdin_fd, int stdout_fd, char *buf, size_t buflen, 
     l.buf = buf;
     l.buflen = buflen;
     l.prompt = prompt;
-    l.plen = strlen(prompt);
+    l.plen = strlen(prompt); //FIXME
     l.oldcolpos = l.pos = 0;
     l.len = 0;
     l.cols = getColumns(stdin_fd, stdout_fd);
@@ -1253,6 +1255,7 @@ static int linenoiseRaw(char *buf, FILE *out, size_t buflen, const char *prompt)
     count = linenoiseEdit(STDIN_FILENO, outfd, buf, buflen, prompt);
     disableRawMode(STDIN_FILENO);
     fprintf(out, " "); //allows the output to be a single line
+    fflush(out);
     return count;
 }
 

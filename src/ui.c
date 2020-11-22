@@ -10,8 +10,7 @@
 void ui(){
 	char *inpt = NULL;
 	puts(MOTD);
-	while(1){
-		inpt = linenoise(PROMPT);
+	while((inpt = linenoise(PROMPT)) != NULL){
 		if(inpt != NULL){
 			linenoiseHistoryAdd(inpt);
 			if(!strcmp("bye", inpt))
@@ -20,6 +19,7 @@ void ui(){
 				run(inpt);
 		}
 		fflush(stdout);
+		linenoiseFree(inpt);
 		putchar('\n');
 	}
 }
