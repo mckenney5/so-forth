@@ -23,6 +23,7 @@ static int check_error(){
 		case E_UNDERFLOW: fprintf(stderr, "%s underflow.", PADDING); break;
 		case E_UNDEFINED_WORD: fprintf(stderr, "%s undefined word.", PADDING); break;
 		case E_OVERFLOW: fprintf(stderr, "%s overflow.", PADDING); break;
+		case E_NULL_PTR: fprintf(stderr, "%s null pointer.", PADDING); break;
 		default: printf("%s unknown error", PADDING);
 	}
 	return error_id;

@@ -7,7 +7,7 @@ long long read_stack(size_t offset);
 long long pop(size_t offset);
 size_t get_index();
 void clear_stack();
-void* push_string(char* str);
-void pop_string(void *str);
+char* push_string(char* str);
+void pop_string(char *str);
 
 #endif

@@ -41,10 +41,6 @@ long long pop(size_t offset){
 		return data_stack[--data_index - offset];
 }
 
-/*void init(){
-	//initalize string stack as needed
-}*/
-
 size_t get_index(){
 	return data_index;
 }
@@ -53,25 +49,23 @@ void clear_stack(){
 	data_index = 1;
 }
 
-void* push_string(char* str){
+char* push_string(char* str){
 // allocates the string and pushes its address and size to the data stack
-	void* temp = NULL;
-	temp = calloc(sizeof(char), strlen(str)+1); //makesure it is null terminated
+	char* temp = NULL;
+	temp = calloc(sizeof(char), strlen(str)+1); //makes sure it is null terminated
 	
-	//TODO check for NULL?
-	strncpy(temp, str, strlen(str));
+	if(temp != NULL) strcpy(temp, str); //cant be overrun since temp is one char bigger
 
 	//push address to the stack
 	push((long)temp);
 	
 	//push strlen to the stack
-	push(strlen(str));
+	push(strlen(temp));
 	return temp;
 }
 
-void pop_string(void* str){
-	free(str); //TODO check error and check for NULL
+void pop_string(char* str){
+	if(str == NULL) set_error(E_NULL_PTR); 
+	else free(str); 
 }
-
-
 
