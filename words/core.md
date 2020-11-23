@@ -47,7 +47,7 @@
 - [ ] ALIGN                             CORE
 - [ ] ALIGNED                           CORE
 - [ ] ALLOT                             CORE
-- [ ] AND                               CORE
+- [X] AND                               CORE
 - [ ] BASE                              CORE
 - [ ] BEGIN                             CORE
 - [ ] BL          b-l                   CORE
@@ -96,7 +96,7 @@
 - [ ] MOD                               CORE
 - [ ] MOVE                              CORE
 - [ ] NEGATE                            CORE
-- [ ] OR                                CORE
+- [X] OR                                CORE
 - [ ] OVER                              CORE
 - [ ] POSTPONE                          CORE
 - [ ] QUIT                              CORE
@@ -126,7 +126,7 @@
 - [ ] VARIABLE                          CORE
 - [ ] WHILE                             CORE
 - [ ] WORD                              CORE
-- [ ] XOR         x-or                  CORE
+- [X] XOR         x-or                  CORE
 - [ ] \[           left-bracket          CORE
 - [ ] \['\]         bracket-tick          CORE
 - [ ] \[CHAR\]      bracket-char          CORE
