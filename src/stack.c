@@ -11,6 +11,20 @@ static size_t data_index = 1; //stack pointer, should point to top (1)
 
 //static long *return_stack = NULL;
 
+/*
+struct Dictionary {
+	struct Dictionary *previous;
+	struct Dictionary *next;
+	char *name;
+	char control_bits; //maybe make unsigned int f1:1; for a single bit flag
+	void *code;
+};
+
+struct Dictionary *head = NULL;
+struct Dictionary *current = NULL;
+
+struct Dictionary dictionary[MAX]; //TODO dynamic allocation
+*/
 void push(const long long data){
 	if(data_index == 0) data_index = 1;
 	if(data_index+1 != MAX) data_stack[data_index++] = data;
