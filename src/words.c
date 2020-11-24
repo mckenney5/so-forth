@@ -46,10 +46,11 @@ int check_words(char *word){
 	else if(!strcmp("or", word)){ ltemp = pop(0); push(ltemp | pop(0)); }
 	else if(!strcmp("and", word)){ ltemp = pop(0); push(ltemp & pop(0)); }
 
-
-
-
+	// -- Non Standard --
 	else if(!strcmp("system", word)){ pop(0); system((char*)pop(0));} //NON-STANDARD
+	#ifdef DEBUGGING
+		else if(!strcmp("debug", word)){ system("make debug && ./soforth.debugging.out"); exit(0);}
+	#endif
 
 	else return 0;
 	
