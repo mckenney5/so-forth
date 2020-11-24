@@ -6,7 +6,7 @@ TODO
 - [ ] Add colors
 - [ ] Add error handeling
 - [ ] Review [ANSI Forth](https://www.taygeta.com/forth/dpansf.html)
-- [X] Fix bugs with Linenoise
+- [ ] Fix bugs with Linenoise
 
 ## Forth Words in order of importance (see words/\*)
 - [ ] CORE
