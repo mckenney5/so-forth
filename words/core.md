@@ -42,7 +42,7 @@
 - [ ] @           fetch                 CORE
 - [ ] ABORT                             CORE
 - [ ] ABORT"      abort-quote           CORE
-- [ ] ABS         abs                   CORE
+- [X] ABS         abs                   CORE
 - [ ] ACCEPT                            CORE
 - [ ] ALIGN                             CORE
 - [ ] ALIGNED                           CORE
