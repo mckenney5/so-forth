@@ -9,8 +9,11 @@
 // size of script files
 #define MAX_SCRIPT 1024
 
+// max name of words, this is subtracted by one
+#define MAX_NAME 34
+
 // what is displayed to the user
-#define PROMPT ""
+#define PROMPT " " // cant be nothing due to linenoise, TODO fix this
 
 // version number
 #define VERSION "Alpha 0.0.1"
