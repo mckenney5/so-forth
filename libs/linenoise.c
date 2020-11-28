@@ -1256,7 +1256,7 @@ static int linenoiseRaw(char *buf, FILE *out, size_t buflen, const char *prompt)
     disableRawMode(STDIN_FILENO);
 
     /* HACK - moves the cursor to the end of the line */
-    fprintf(out, "\x1b[%ldG ", strlen(buf) +1);
+    fprintf(out, "\x1b[%ldG ", strlen(buf) +2);
     fflush(out);
 
     return count;
