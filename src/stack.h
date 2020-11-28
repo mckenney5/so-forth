@@ -1,6 +1,8 @@
 #ifndef _USING_STACK_H
 #define _USING_STACK_H
 
+size_t dictionary_add(char **input, size_t index);
+int dictionary_search(char* word);
 void push(const long data);
 void show_stack();
 long long read_stack(size_t offset);

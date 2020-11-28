@@ -15,8 +15,11 @@ void ui(){
 			linenoiseHistoryAdd(inpt);
 			if(!strcmp("bye", inpt))
 				break;
-			else
+			else {
 				run(inpt);
+				if(!get_error()) printf("%s ok", PADDING);
+				set_error(0);
+			}
 		}
 		fflush(stdout);
 		linenoiseFree(inpt);

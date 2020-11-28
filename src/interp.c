@@ -6,6 +6,7 @@
 #include "stack.h"
 #include "words.h"
 #include "errors.h"
+#include "strings.h"
 
 static int error_id = 0;
 
@@ -78,26 +79,31 @@ void handle_operator(char op){
 
 
 void run(char *input){
-	char *t = NULL;
+	if(!strcmp(input, "")) return;
+	size_t i = 0, l=0, occur = 1;;
+	char *temp = NULL;
+	char **t = tokenize(input);
+
 	//size_t count = 0; //count commands
-	t = strtok(input, " ");
-	for(; t != NULL; t = strtok(NULL, " ")){
+	for(; t[i] != NULL; i++){
 		//count++; //TODO use this for errors
-		to_lower(t);
-		if(check_words(t));
-		else if(!strcmp(" ", t));
-		else if(!strcmp("bye", t)){ putchar('\n'); exit(0);}
-		else if(is_operator(t)) handle_operator(t[0]);
-		else if(!strcmp(".\"", t)){ t = strtok(NULL, "\""); printf("%s", t);} //put a string and its size on the stack
-		else if(!strcmp("s\"", t)){ t = strtok(NULL, "\""); push_string(t);} //put a string and its size on the stack
-		else if(!strcmp("exit", t)) break; //NON-STANDARD (interpretation is undefined so this brings the user back to the interp.)
-		else if(is_digit(t)) push(atoll(t));
+		to_lower(t[i]);
+		if(dictionary_search(t[i]));
+		else if(check_words(t[i]));
+		else if(!strcmp(" ", t[i]));
+		else if(!strcmp("bye", t[i])){ putchar('\n'); exit(0);}
+		else if(is_operator(t[i])) handle_operator(t[i][0]);
+		//FIXME else if(!strcmp(".\"", t[i])){ for(i++; strcmp(t[i], "\""); i++){ if(t[i] == NULL) break; else printf("%s ", t[i]);}} //display a string
+		//FIXME else if(!strcmp("s\"", t[i])){ temp = dice(input, find_str(t[i], "s\"", occur), find(t[i], '"', occur)); push_string(temp);} //put a string and its size on the stack
+		else if(!strcmp("exit", t[i])) break; //NON-STANDARD (interpretation is undefined -so this brings the user back to the interp.)
+		else if(!strcmp(":", t[i])){ i = dictionary_add(t, i);} //HACK
+		else if(is_digit(t[i])) push(atoll(t[i]));
 
 		else error_id = E_UNDEFINED_WORD;
 		
 		if(check_error()){ clear_stack(); break;} //if there is an error, clean the stack and stop
 	}
-	if(!get_error()) printf("%s ok", PADDING);
-	error_id = 0;
+	free(t);
+	if(temp != NULL) free(temp);
 }
 

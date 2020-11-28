@@ -1,6 +1,6 @@
-SOFORTH_DEPENDS = src/ui.c src/interp.c src/interp.h src/stack.c src/stack.h src/config.h src/words.c src/words.h
+SOFORTH_DEPENDS = src/ui.c src/interp.c src/interp.h src/stack.c src/stack.h src/config.h src/words.c src/words.h src/strings.h src/strings.c
 LINENOISE_DEPENDS = libs/linenoise.c libs/linenoise.h
-C_FILES = libs/linenoise.c src/ui.c src/interp.c src/stack.c src/words.c
+C_FILES = libs/linenoise.c src/ui.c src/interp.c src/stack.c src/words.c src/strings.c
 C_FLAGS = -Wall -Wimplicit-fallthrough=0 -Ofast
 C_DEBUG_FLAGS = -Wall -Wextra -O0 -g -DDEBUGGING -Wimplicit-fallthrough=0
 
