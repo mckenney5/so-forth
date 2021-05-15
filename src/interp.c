@@ -102,6 +102,7 @@ void run(char *input){
 		else if(!strcmp("exit", t[i])) break; //NON-STANDARD (interpretation is undefined -so this brings the user back to the interp.)
 		else if(!strcmp(":", t[i])){ i = dictionary_add(t, i);} //HACK
 		else if(is_digit(t[i])) push(atoll(t[i]));
+		else if(!strcmp("\\", t[i])) t[i--] = '\0'; //remove the rest of the line
 
 		else error_id = E_UNDEFINED_WORD;
 		

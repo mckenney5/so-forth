@@ -43,4 +43,4 @@
 - [ ] VALUE                             CORE EXT
 - [ ] WITHIN                            CORE EXT
 - [ ] \[COMPILE\]   bracket-compile       CORE EXT
-- [ ] \           backslash             CORE EXT
+- [X] \           backslash             CORE EXT
