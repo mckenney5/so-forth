@@ -102,9 +102,16 @@ void run(char *input){
 		else if(!strcmp("exit", t[i])) break; //NON-STANDARD (interpretation is undefined -so this brings the user back to the interp.)
 		else if(!strcmp(":", t[i])){ i = dictionary_add(t, i);} //HACK
 		else if(is_digit(t[i])) push(atoll(t[i]));
-		else if(!strcmp("\\", t[i])) t[i--] = '\0'; //remove the rest of the line
+		else if(!strcmp("\\", t[i])) t[i--] = '\0'; //remove the rest of the line for comments
+		else if(!strcmp("(", t[i])) for(++i; t[i] != NULL && strcmp(")", t[i]); i++); //skip comments
+		else if(!strcmp("", t[i])); //if it is null, skip
 
-		else error_id = E_UNDEFINED_WORD;
+		else { 
+			error_id = E_UNDEFINED_WORD;
+			#ifdef DEBUGGING
+				fprintf(stderr, "Unknown Word '%s' at word %ld.\n", t[i], i);
+			#endif
+		}
 		
 		if(check_error()){ clear_stack(); break;} //if there is an error, clean the stack and stop
 	}

@@ -3,7 +3,7 @@
 - [ ] #>          number-sign-greater   CORE
 - [ ] #S          number-sign-s         CORE
 - [ ] '           tick                  CORE
-- [ ] \(           paren                 CORE
+- [X] \(           paren                 CORE
 - [X] \*           star                  CORE
 - [X] \*/          star-slash            CORE
 - [ ] \*/MOD       star-slash-mod        CORE
