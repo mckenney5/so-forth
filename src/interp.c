@@ -80,7 +80,7 @@ void handle_operator(char op){
 
 void run(char *input){
 	if(!strcmp(input, "")) return;
-	size_t i = 0, l=0, occur = 1;;
+	size_t i = 0, l=0, occur = 1;
 	char *temp = NULL;
 	char **t = tokenize(input);
 
@@ -93,7 +93,11 @@ void run(char *input){
 		else if(!strcmp(" ", t[i]));
 		else if(!strcmp("bye", t[i])){ putchar('\n'); exit(0);}
 		else if(is_operator(t[i])) handle_operator(t[i][0]);
-		//FIXME else if(!strcmp(".\"", t[i])){ for(i++; strcmp(t[i], "\""); i++){ if(t[i] == NULL) break; else printf("%s ", t[i]);}} //display a string
+		else if(!strcmp(".\"", t[i])){ 
+			l = find(input, '"', 1); //i is word index, not char index, loop through input, maybe use find_str
+			for(i++; i != l; i++) 
+				printf("%s ", t[i]);
+		} //display a string
 		//FIXME else if(!strcmp("s\"", t[i])){ temp = dice(input, find_str(t[i], "s\"", occur), find(t[i], '"', occur)); push_string(temp);} //put a string and its size on the stack
 		else if(!strcmp("exit", t[i])) break; //NON-STANDARD (interpretation is undefined -so this brings the user back to the interp.)
 		else if(!strcmp(":", t[i])){ i = dictionary_add(t, i);} //HACK

@@ -110,6 +110,8 @@ int main(){
 
 	printf("Looking for '%s' in input: 1st occurance '%ld' 2nd: '%ld'\n", "12", find_str(buff, "12", 1), find_str(buff, "12", 2));
 
+	printf("Looking for the 2nd '1' in the string: %ld\n", find(buff, '1', 2));
+
 	char **tokens = tokenize(buff);
 	size_t i = 0;
 	for(; tokens[i] != NULL; i++)
