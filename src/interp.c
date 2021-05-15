@@ -94,9 +94,13 @@ void run(char *input){
 		else if(!strcmp("bye", t[i])){ putchar('\n'); exit(0);}
 		else if(is_operator(t[i])) handle_operator(t[i][0]);
 		else if(!strcmp(".\"", t[i])){ 
-			l = find(input, '"', 1); //i is word index, not char index, loop through input, maybe use find_str
-			for(i++; i != l; i++) 
-				printf("%s ", t[i]);
+			while(t[++i] != NULL && t[i][strlen(t[i])-1] != '"'){
+				printf("%s ", t[i]); //print text that does not have a "
+			}
+			if(t[i] == NULL) break; //if we reached the end, stop
+			else {
+				for(l = 0; t[i][l] != '"'; l++) putchar(t[i][l]); //print a string tha has the ending "
+			}
 		} //display a string
 		//FIXME else if(!strcmp("s\"", t[i])){ temp = dice(input, find_str(t[i], "s\"", occur), find(t[i], '"', occur)); push_string(temp);} //put a string and its size on the stack
 		else if(!strcmp("exit", t[i])) break; //NON-STANDARD (interpretation is undefined -so this brings the user back to the interp.)
