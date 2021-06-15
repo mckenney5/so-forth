@@ -14,9 +14,10 @@ void ui(){
 	while((inpt = linenoise(PROMPT)) != NULL){
 		if(inpt != NULL){
 			linenoiseHistoryAdd(inpt);
-			if(!strcmp("bye", inpt))
+			if(!strcmp("bye", inpt)){
+				linenoiseFree(inpt);
 				break;
-			else {
+			} else {
 				run(inpt);
 				if(!get_error()) printf("%s %sok%s", PADDING, GREEN, RESET);
 				set_error(0);

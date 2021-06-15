@@ -151,6 +151,8 @@ void run(char *input){
 		
 		if(check_error()){ clear_stack(); break;} //if there is an error, clean the stack and stop
 	}
+	for(i=0; t[i] != NULL; i++)
+		free(t[i]);
 	free(t);
 	if(temp != NULL) free(temp);
 }
