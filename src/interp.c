@@ -3,6 +3,7 @@
 #include <string.h>
 
 #include "config.h"
+#include "colors.h"
 #include "stack.h"
 #include "words.h"
 #include "errors.h"
@@ -19,14 +20,16 @@ int get_error(){
 }
 
 static int check_error(){
+	fprintf(stderr, "%s", RED);
 	switch(get_error()){
 		case 0: break;
 		case E_UNDERFLOW: fprintf(stderr, "%s underflow.", PADDING); break;
 		case E_UNDEFINED_WORD: fprintf(stderr, "%s undefined word.", PADDING); break;
 		case E_OVERFLOW: fprintf(stderr, "%s overflow.", PADDING); break;
 		case E_NULL_PTR: fprintf(stderr, "%s null pointer.", PADDING); break;
-		default: printf("%s unknown error", PADDING);
+		default: fprintf(stderr, "%s unknown error", PADDING);
 	}
+	fprintf(stderr, "%s", RESET);
 	return error_id;
 }
 static void to_lower(char* word){

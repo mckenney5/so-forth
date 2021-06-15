@@ -4,6 +4,7 @@
 
 #include "interp.h"
 #include "config.h"
+#include "colors.h"
 
 #include "../libs/linenoise.h"
 
@@ -17,7 +18,7 @@ void ui(){
 				break;
 			else {
 				run(inpt);
-				if(!get_error()) printf("%s ok", PADDING);
+				if(!get_error()) printf("%s %sok%s", PADDING, GREEN, RESET);
 				set_error(0);
 			}
 		}
