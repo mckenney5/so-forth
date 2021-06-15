@@ -27,7 +27,7 @@
 - [X] 2DROP       two-drop              CORE
 - [X] 2DUP        two-dupe              CORE
 - [ ] 2OVER       two-over              CORE
-- [ ] 2SWAP       two-swap              CORE
+- [X] 2SWAP       two-swap              CORE
 - [ ] :           colon                 CORE
 - [ ] ;           semicolon             CORE
 - [X] <           less-than             CORE
@@ -114,7 +114,7 @@
 - [X] SPACE                             CORE
 - [X] SPACES                            CORE
 - [ ] STATE                             CORE
-- [ ] SWAP                              CORE
+- [X] SWAP                              CORE
 - [ ] THEN                              CORE
 - [X] TYPE                              CORE
 - [ ] U\.          u-dot                 CORE

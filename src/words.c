@@ -13,7 +13,10 @@ int check_words(char *word){
  * returns 1 if a command was found, returns 0 if it wasnt
  * add new words above and here, dont forget to add them to the header
  */
-	long ltemp = 0;
+	long ltemp = 0; //TODO make this an array
+	long ltemp2 = 0;
+	long ltemp3 = 0;
+	long ltemp4 = 0;
 	char* stemp = 0;
 	size_t i = 0;
 	
@@ -45,6 +48,8 @@ int check_words(char *word){
 	else if(!strcmp("xor", word)){ ltemp = pop(0); push(ltemp ^ pop(0)); }
 	else if(!strcmp("or", word)){ ltemp = pop(0); push(ltemp | pop(0)); }
 	else if(!strcmp("and", word)){ ltemp = pop(0); push(ltemp & pop(0)); }
+	else if(!strcmp("swap", word)){ ltemp = pop(0); ltemp2 = pop(0); push(ltemp); push(ltemp2); }
+	else if(!strcmp("2swap", word)){ ltemp = pop(0); ltemp2 = pop(0); ltemp3 = pop(0); ltemp4 = pop(0); push(ltemp2); push(ltemp); push(ltemp4); push(ltemp3); }
 
 	// -- Non Standard --
 	else if(!strcmp("system", word)){ pop(0); system((char*)pop(0));} //NON-STANDARD
