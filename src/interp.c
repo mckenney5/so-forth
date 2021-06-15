@@ -87,7 +87,7 @@ size_t make_string(char **t, size_t i){
 	if(t[i] == NULL){
 		size = 0;
 	} else {
-		for(i; t[i] != NULL && t[i][strlen(t[i])-1] != '"'; i++)
+		for(; t[i] != NULL && t[i][strlen(t[i])-1] != '"'; i++)
 			size = size + strlen(t[i]) + 1;
 		if(t[i] != NULL) size = size + strlen(t[i]); //last part of the string
 	}
@@ -100,7 +100,7 @@ size_t make_string(char **t, size_t i){
 	}
 	string[0] = '\0';
 	if(t[i] != NULL) t[i][strlen(t[i]) - 1] = '\0'; // remove the "
-	for(start; start != i; start++){
+	for(; start != i; start++){
 		strcat(string, t[start]);
 		strcat(string, " ");
 	}
@@ -112,7 +112,7 @@ size_t make_string(char **t, size_t i){
 
 void run(char *input){
 	if(!strcmp(input, "")) return;
-	size_t i = 0, l=0, occur = 1;
+	size_t i = 0, l=0;
 	char *temp = NULL;
 	char **t = tokenize(input);
 
