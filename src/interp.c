@@ -81,9 +81,13 @@ size_t make_string(char **t, size_t i){
 	char *string = NULL;
 	size_t size = 0;
 	size_t start = ++i;
-	for(i; t[i][strlen(t[i])-1] != '"'; i++)
-		size = size + strlen(t[i]) + 1;
-	size = size + strlen(t[i]); //last part of the string
+	if(t[i] == NULL){
+		size = 0;
+	} else {
+		for(i; t[i] != NULL && t[i][strlen(t[i])-1] != '"'; i++)
+			size = size + strlen(t[i]) + 1;
+		if(t[i] != NULL) size = size + strlen(t[i]); //last part of the string
+	}
 	string = malloc(size * sizeof(char));
 	if(!string){
 		//TODO handle better
@@ -92,12 +96,12 @@ size_t make_string(char **t, size_t i){
 		return i;
 	}
 	string[0] = '\0';
-	t[i][strlen(t[i]) - 1] = '\0'; // remove the "
+	if(t[i] != NULL) t[i][strlen(t[i]) - 1] = '\0'; // remove the "
 	for(start; start != i; start++){
 		strcat(string, t[start]);
 		strcat(string, " ");
 	}
-	strcat(string, t[start]);
+	if(t[start] != NULL) strcat(string, t[start]);
 	push((long) (long) (char*) string);
 	push(size);
 	return i;
@@ -127,7 +131,6 @@ void run(char *input){
 				for(l = 0; t[i][l] != '"'; l++) putchar(t[i][l]); //print a string tha has the ending "
 			}
 		} //display a string
-		//FIXME else if(!strcmp("s\"", t[i])){ temp = dice(input, find_str(t[i], "s\"", occur), find(t[i], '"', occur)); push_string(temp);} //put a string and its size on the stack
 		else if(!strcmp("s\"", t[i])) i = make_string(t, i);
 		else if(!strcmp("exit", t[i])) break; //NON-STANDARD (interpretation is undefined -so this brings the user back to the interp.)
 		else if(!strcmp(":", t[i])){ i = dictionary_add(t, i);} //HACK
