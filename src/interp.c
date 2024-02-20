@@ -91,7 +91,7 @@ size_t make_string(char **t, size_t i){
 			size = size + strlen(t[i]) + 1;
 		if(t[i] != NULL) size = size + strlen(t[i]); //last part of the string
 	}
-	string = malloc(size * sizeof(char));
+	string = malloc((size +1) * sizeof(char));
 	if(!string){
 		//TODO handle better
 		push(0);

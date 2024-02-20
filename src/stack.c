@@ -13,7 +13,7 @@ static size_t data_index = 1; //stack pointer, should point to top (1)
 //static long *return_stack = NULL;
 
 
-static struct Dictionary {
+struct Dictionary {
 	//struct Dictionary *previous;
 	//struct Dictionary *next;
 
@@ -23,7 +23,7 @@ static struct Dictionary {
 	char name[MAX_NAME];
 	char code[MAX]; //TODO compile
 	//char parameters[MAX]; variables
-};
+} ;
 
 //struct Dictionary *head = NULL;
 //struct Dictionary *current = NULL;
